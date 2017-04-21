@@ -11,12 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
- 
+Route::get('/', 'HomeController@index');
+
 Auth::routes();
 
-Route::get('/home', function () {
-    return view('Hi');
-});
+Route::get('/home', 'PostController@showDashboard');
+
+Route::post('/createpost','PostController@createPost');
+
+Route::get('/home/{id}/delete', 'PostController@deletePost');
