@@ -10,4 +10,19 @@ class Post extends Model
     {
     	return $this->belongsTo('App\User');
     }
-}
+
+    public function comments()
+    {
+    	return $this->hasMany('App\Comment');
+    }
+
+    public function photo()
+    {
+    	return $this->hasOne('App\Photo');
+    }
+
+    public function likes()
+    {
+        return $this->hasMany('App\Like');
+    }
+} 

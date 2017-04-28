@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        Session::flash('message','successfully logged in. welcome to arti!');
+        Session::flash('message','log in successful!');
         return redirect('home');
     }
 }

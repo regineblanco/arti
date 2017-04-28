@@ -53,6 +53,9 @@
                                 <button type="submit" class="btn btn-default">
                                     log in
                                 </button>
+                                <a href="{{ url('/welcome') }}">
+                                    <button type="button" class="btn btn-default">back</button>
+                                </a>
 
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     forgot your password?

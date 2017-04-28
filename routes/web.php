@@ -11,12 +11,43 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+// Route::group(['middleware' => ['web']], function() {
 
-Auth::routes();
+// 	Route::get('/', function() {
+// 		return view('welcome');
+// 	});
 
-Route::get('/home', 'PostController@showDashboard');
+	Route::get('/welcome', function () {
+	    return view('welcome');
+	});
 
-Route::post('/createpost','PostController@createPost');
+	Route::get('/', 'HomeController@index');
 
-Route::get('/home/{id}/delete', 'PostController@deletePost');
+	Auth::routes();
+
+	Route::get('/home', 'PostController@showDashboard');
+
+	Route::post('/createpost','PostController@createPost');
+
+	Route::get('/home/{id}/delete', 'PostController@deletePost');
+
+	Route::post('/editpost/{id}', 'PostController@editPost');
+
+	Route::post('/addcomment/{id}','CommentController@addComment');
+
+	Route::get('/home/{id}/deletecomment', 'CommentController@deleteComment');
+
+	Route::post('/editcomment/{id}', 'CommentController@editcomment');
+
+	Route::post('/addphoto','PhotoController@addPhoto');
+
+	Route::get('/profile', 'ProfileController@showProfile');
+
+	Route::get('/profile/{id}', 'ProfileController@showOtherProfile');
+
+	Route::post('/editprofile', 'ProfileController@editProfile');
+
+	Route::post('/like', 'PostController@likePost');
+
+// });
+
