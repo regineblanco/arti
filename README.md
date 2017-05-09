@@ -10,4 +10,4 @@ It is my first foray into object-oriented programming and the usage of a framewo
 <li>Laravel framework for PHP</li>
 <li>MySQL as database</li>
 <li>AJAX for liking/disliking posts</li>
-<li>Salvattore.js framework, a jQuery Masonry alternative to view posts on profiles</li>
+<li><a href="http://salvattore.com/" target="_blank">Salvattore.js</a> framework, a jQuery Masonry alternative to view posts on profiles</li>
